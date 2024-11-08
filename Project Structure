@@ -1,0 +1,13 @@
+- src/
+  - dao/
+    - PropertyDao.java
+  - model/
+    - Property.java
+  - servlet/
+    - PropertyServlet.java
+- web/
+  - index.html
+  - style.css
+  - script.js
+- WEB-INF/
+  - web.xml
