@@ -17,4 +17,16 @@ It is a basic web application, ideal as a starting point for learning how to dev
 - **Database**: MySQL
 - 
 ## Project Structure
-
+- src/
+  - dao/
+    - PropertyDao.java
+  - model/
+    - Property.java
+  - servlet/
+    - PropertyServlet.java
+- web/
+  - index.html
+  - style.css
+  - script.js
+- WEB-INF/
+  - web.xml
