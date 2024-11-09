@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real Estate Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Real Estate Properties</h1>
+    
+    <form action="properties" method="post">
+        <input type="text" name="name" placeholder="Property Name" required>
+        <input type="text" name="location" placeholder="Location" required>
+        <input type="number" name="price" placeholder="Price" required>
+        <input type="number" name="area" placeholder="Area (sq ft)" required>
+        <button type="submit">Add Property</button>
+    </form>
+    
+    <div id="property-list">
+        <h2>Available Properties</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Price</th>
+                <th>Area</th>
+            </tr>
+            <!-- Property rows will be dynamically inserted here -->
+        </table>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
