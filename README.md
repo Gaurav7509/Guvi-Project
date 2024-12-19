@@ -66,10 +66,10 @@ RealEstateManagementSystem/
 └── README.md                 # Project documentation
 
 
-- **dao/**: Contains classes for database operations.
-- **model/**: Contains Python classes representing the Property, Client, and Transaction tables.
-- **util/**: Contains utility classes such as DBConnection for managing database connections.
-- **db/**: Contains SQL script to set up the SQLite database and tables.
+- *dao/*: Contains classes for database operations.
+- *model/*: Contains Python classes representing the Property, Client, and Transaction tables.
+- *util/*: Contains utility classes such as DBConnection for managing database connections.
+- *db/*: Contains SQL script to set up the SQLite database and tables.
 
 ## Setup Instructions
 
