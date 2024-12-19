@@ -60,12 +60,8 @@ RealEstateManagementSystem/
 ├── web_app/                  # Frontend web resources
     ├── css/                  # Stylesheets for the project
     │   ├── styles.css        # Main stylesheet
-    ├── images/               # Images used in the web application
     ├── js/                   # JavaScript files
     │   ├── script.js         # Main JavaScript file
-    ├── properties.html       # Page to view and manage properties
-    ├── clients.html          # Page to view and manage clients
-    ├── transactions.html     # Page to view and manage transactions
     ├── index.html            # Home page (main entry point for the web app)
 ```
 
