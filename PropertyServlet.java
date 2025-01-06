@@ -1,33 +1,51 @@
-import javax.servlet.*;
+package servlet;
+
+import dao.PropertyDao;
+import model.Property;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
-import java.io.*;
-import java.sql.SQLException;
+import java.io.IOException;
+import java.util.List;
 
+@WebServlet("/properties")
 public class PropertyServlet extends HttpServlet {
-    private PropertyDao propertyDao;
+    private PropertyDao propertyDao = new PropertyDao();
 
+    // Handling GET request to retrieve all properties
     @Override
-    public void init() throws ServletException {
-        super.init();
-        propertyDao = new PropertyDao(); // Initialize PropertyDao
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Get all properties from the database using the PropertyDao
+        List<Property> properties = propertyDao.getAllProperties();
+
+        // Set the properties attribute in the request to pass to the JSP
+        request.setAttribute("properties", properties);
+
+        // Forward the request to the JSP page to display the properties
+        request.getRequestDispatcher("/properties.jsp").forward(request, response);
     }
 
+    // Handling POST request to add a new property
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try {
-            String name = request.getParameter("name");
-            String location = request.getParameter("location");
-            double price = Double.parseDouble(request.getParameter("price"));
-            float area = Float.parseFloat(request.getParameter("area"));
+        // Get data from the form submission
+        String name = request.getParameter("name");
+        String location = request.getParameter("location");
+        double price = Double.parseDouble(request.getParameter("price"));
+        float area = Float.parseFloat(request.getParameter("area"));
 
-            Property property = new Property(name, location, price, area);
-            propertyDao.addProperty(property);
+        // Create a new Property object
+        Property property = new Property();
+        property.setName(name);
+        property.setLocation(location);
+        property.setPrice(price);
+        property.setArea(area);
 
-            response.sendRedirect("properties");  // Redirect to the properties list page
-        } catch (NumberFormatException e) {
-            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid input for price or area.");
-        } catch (SQLException e) {
-            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error adding property to the database.");
-        }
+        // Use PropertyDao to insert the new property into the database
+        propertyDao.addProperty(property);
+
+        // After the property is added, redirect back to the /properties URL (GET request)
+        response.sendRedirect("properties");
     }
 }
