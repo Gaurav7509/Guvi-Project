@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>real-estate-management-system</name> <!-- Updated project name -->
+	<comment>Real Estate Management System Web Application</comment> <!-- Brief project description -->
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name> <!-- Java builder for compiling Java files -->
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.wst.common.project.facet.core.builder</name> <!-- Web module builder -->
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.wst.validation.validationbuilder</name> <!-- Builder for validating the project -->
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.m2e.core.maven2Builder</name> <!-- Maven builder for handling dependencies and packaging -->
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jem.workbench.JavaEMFNature</nature> <!-- EMF nature for modeling or Java-based applications -->
+		<nature>org.eclipse.wst.common.modulecore.ModuleCoreNature</nature> <!-- Web application support (like servlets/JSP) -->
+		<nature>org.eclipse.jdt.core.javanature</nature> <!-- Java support for compiling Java code -->
+		<nature>org.eclipse.m2e.core.maven2Nature</nature> <!-- Maven integration for dependency management and building -->
+		<nature>org.eclipse.wst.common.project.facet.core.nature</nature> <!-- Web-related facets (e.g., for servlet/JSP) -->
+		<nature>org.eclipse.wst.jsdt.core.jsNature</nature> <!-- JavaScript support, which might be useful for the front end -->
+	</natures>
+</projectDescription>
