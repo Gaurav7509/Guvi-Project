@@ -148,7 +148,7 @@ CREATE TABLE applications (
 1. **📥 Clone the Repository**
 
    ```bash
-   git clone https://github.com/sah-aditya/real_estate_management_system.git
+   git clone https://github.com/Gaurav7509/Guvi-Project.git
    cd real_estate_management_system
    ```
 
